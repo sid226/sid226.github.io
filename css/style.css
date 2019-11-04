@@ -16,8 +16,8 @@ body {
 	text-align: center;
 	padding: 40px 10px;
 	margin-bottom: 50px;
-	color: #f66b4c;
-	background-color: #271f5b;
+	color: #FFBF3A;
+	background-color: #463181;
 }
 
 .title {
@@ -44,7 +44,7 @@ body {
 }
 
 .button {
-    background-color: #f66b4c; /* Green */
+    background-color: #FFBF3A; /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
