@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--[if IE]> <html class="is-ie"> <![endif]-->
+<!--[!(IE)]><!--> <html> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    
+    <!-- Title -->
+    <title> </title>
+    <!-- Description -->
+    <meta name="description" content="">
+    <!-- Index, Follow -->
+    <meta name="robots" content="noindex,nofollow" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="./js/Scratch.js"></script>
+</head>
+
+<body>
+
+    <h1 class="title-main">FREE ReTez Scrach Cards</h1>
+
+   
+    <p class="text-intro">
+         <button class="button" onclick="generateCard();">Generate new scrach card</button>
+        <br>
+        <br>
+        You have Won a Scrach card!!!
+    </p>
+
+    <div class="max-width">
+         <div class="scratch_container">
+            <div class="scratch_viewport">
+                <!-- result picture -->
+                <canvas id="js-scratch-canvas"></canvas>
+            </div>
+        </div>
+ 
+    </div>
+   <p class="text-intro">
+        <br>
+      Do not expect payment within 48 hours.
+       <br><br>
+       This is a joke....Really!! Dont expect anything.
+       <br>Stop wasting your time.
+    </p>
+    
+   
+
+    <script type="text/javascript">
+ var scratch=null;
+ 
+        function getRandomArbitrary(min, max) {
+    return Math.trunc(Math.random() * (max - min) + min);
+}
+
+        var generateCard= function(){
+            
+      scratch  = new Scratch({
+            canvasId: 'js-scratch-canvas',
+            imageBackground: './images/'+getRandomArbitrary(1,6)+'.jpg',
+            pictureOver: './images/foreground.png',
+            radius: 20,
+            nPoints: 500,
+            percent: 50,
+            callback: function () {
+                     scratch.clear(); 
+                      },
+            pointSize: { x: 3, y: 3}
+        });
+};
+        
+        generateCard();
+
+    </script>
+
+
+
+</body>
+</html>
